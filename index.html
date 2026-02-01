@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dein Weg zum Wohlbefinden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-herbal-green { background-color: #43b02a; }
+        .text-herbal-green { color: #43b02a; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+        
+        @media print {
+            @page { size: A4; margin: 1cm; }
+            body { background-color: white; padding: 0; }
+            .no-print { display: none !important; }
+            .card-shadow { box-shadow: none !important; border: none !important; }
+            .max-w-4xl { max-width: 100% !important; margin: 0 !important; }
+            main { padding: 0 !important; }
+            section { break-inside: avoid; }
+        }
+
+        .action-btn { transition: all 0.2s; }
+        .action-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased p-4 md:p-8">
+
+    <!-- Barra delle Azioni Superiore -->
+    <div class="max-w-4xl mx-auto mb-6 flex flex-wrap justify-between items-center gap-4 no-print">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500">Wellness Dashboard</h2>
+        <div class="flex gap-3">
+            <!-- Pulsante WhatsApp Superiore -->
+            <a href="https://wa.me/393792118565" target="_blank" class="action-btn flex items-center gap-2 bg-green-500 text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:bg-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                WhatsApp
+            </a>
+            <!-- Pulsante Stampa -->
+            <button onclick="window.print()" class="action-btn flex items-center gap-2 bg-white text-gray-700 px-5 py-2.5 rounded-full font-semibold shadow-md border border-gray-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Drucken
+            </button>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden card-shadow mb-8">
+        
+        <header class="bg-herbal-green p-8 text-center text-white">
+            <h1 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">Dein Weg zum Wohlbefinden</h1>
+            <p class="mt-2 text-lg opacity-90 font-light italic">Energie, Ernährung und Vitalität für jeden Tag</p>
+        </header>
+
+        <main class="p-6 md:p-10 space-y-10">
+
+            <!-- Abschnitt 1: Frühstück -->
+            <section>
+                <div class="flex items-center gap-3 mb-6 border-b pb-4 border-gray-100">
+                    <div class="bg-herbal-green text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                    <h2 class="text-2xl font-bold text-herbal-green uppercase tracking-wide">Das ausgewogene Frühstück</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Aloe -->
+                    <div class="flex flex-col items-center text-center p-4 border border-gray-100 rounded-2xl bg-gray-50">
+                        <div class="h-40 flex items-center justify-center mb-4">
+                            <img src="Aloe.png" alt="Aloe Drink" class="h-full object-contain" onerror="this.src='https://via.placeholder.com/200?text=Aloe'">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-herbal-green uppercase text-sm tracking-wide">1. Hydratation (Aloe)</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            <strong>3 VERSCHLUSSKAPPEN</strong> in ein Glas Wasser.<br>
+                            <span class="text-xs italic mt-1 block">(Nach dem Öffnen im Kühlschrank lagern)</span>
+                        </p>
+                    </div>
+
+                    <!-- Infuso -->
+                    <div class="flex flex-col items-center text-center p-4 border border-gray-100 rounded-2xl bg-gray-50">
+                        <div class="h-40 flex items-center justify-center mb-4">
+                            <img src="Infuso.png" alt="Infuso" class="h-full object-contain" onerror="this.src='https://via.placeholder.com/200?text=Infuso'">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-herbal-green uppercase text-sm tracking-wide">2. Energie (Tee-Getränk)</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            <strong>½ TEELÖFFEL</strong> in eine Tasse heißes Wasser oder in 1,5 Liter Wasser über den Tag verteilt.
+                        </p>
+                    </div>
+
+                    <!-- F1 + PDM -->
+                    <div class="flex flex-col items-center text-center p-4 border border-gray-100 rounded-2xl bg-gray-50">
+                        <div class="h-40 flex items-center justify-center mb-4 gap-2">
+                            <img src="Formula 1.png" alt="Formula 1" class="h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=F1'">
+                            <img src="pdm.png" alt="PDM" class="h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=PDM'">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-herbal-green uppercase text-sm tracking-wide">3. Ernährung (F1 + PDM)</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            <strong>2 Löffel F1 + 1 Löffel PDM</strong> in 250ml Wasser oder Pflanzenmilch.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abschnitt Ziele -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                    <h3 class="text-blue-700 font-bold text-xl mb-3 flex items-center gap-2">⚖️ Gewichtskontrolle</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Ersetze <strong>2 Mahlzeiten pro Tag</strong>:<br>
+                        • FRÜHSTÜCK + eine HAUPTMAHLZEIT (Mittag- oder Abendessen).
+                    </p>
+                </div>
+                <div class="p-6 bg-orange-50 rounded-2xl border border-orange-100">
+                    <h3 class="text-orange-700 font-bold text-xl mb-3 flex items-center gap-2">💪 Muskelmasse</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Verzehre <strong>3 Shakes pro Tag</strong>:<br>
+                        • FRÜHSTÜCK + ca. 1 Stunde nach MITTAG- und ABENDESSEN.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Abschnitt Snacks -->
+            <section class="bg-gray-50 p-8 rounded-3xl border border-gray-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-herbal-green text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                    <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wide">Snacks und Nachmittag</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 mb-4 font-semibold text-sm">Proteine und Hydratation: Wichtig, um den Hunger bis zum Abendessen zu kontrollieren.</p>
+                        <div class="flex justify-center md:justify-start">
+                            <img src="Barretta.png" alt="Protein Riegel" class="w-48 h-48 object-contain rounded-2xl bg-white p-2 shadow-sm" onerror="this.src='https://via.placeholder.com/200?text=Barretta'">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-herbal-green mb-3 uppercase text-xs tracking-widest">Gesunde Snack-Optionen:</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>✔️ Herbalife Protein-Riegel</li>
+                            <li>✔️ 1 Stück Obst + 5-6 Mandeln</li>
+                            <li>✔️ Magerer griechischer Joghurt</li>
+                            <li>✔️ Hummus mit Rohkost</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Goldene Regeln -->
+            <section class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 bg-white rounded-2xl border border-gray-200">
+                    <div class="text-2xl mb-1">💧</div>
+                    <p class="text-[10px] font-bold uppercase text-gray-400">Hydratation</p>
+                    <p class="text-xs font-semibold">2L Wasser am Tag</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-gray-200">
+                    <div class="text-2xl mb-1">🏃</div>
+                    <p class="text-[10px] font-bold uppercase text-gray-400">Aktivität</p>
+                    <p class="text-xs font-semibold">30 Min. Bewegung</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-gray-200">
+                    <div class="text-2xl mb-1">🥗</div>
+                    <p class="text-[10px] font-bold uppercase text-gray-400">Ernährung</p>
+                    <p class="text-xs font-semibold">Ausgewogene Kost</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-gray-200">
+                    <div class="text-2xl mb-1">✨</div>
+                    <p class="text-[10px] font-bold uppercase text-gray-400">Erfolg</p>
+                    <p class="text-xs font-semibold">Tägliche Disziplin</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-gray-900 p-8 text-center text-white">
+            <p class="text-xl font-bold mb-2 text-white">Spüre sofort den Unterschied!</p>
+            <div class="flex items-center justify-center gap-2 mb-4 text-herbal-green font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                <span>WhatsApp: +39 379 211 8565</span>
+            </div>
+            <p class="text-[10px] opacity-40 uppercase tracking-widest text-white">© Wellness Hub - Dein persönlicher Guide ✨</p>
+        </footer>
+
+    </div>
+</body>
+</html>
